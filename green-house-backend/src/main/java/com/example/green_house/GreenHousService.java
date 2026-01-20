@@ -29,15 +29,7 @@ public class GreenHousService {
     System.out.println("Data saved: " + data);
     return data;
 }
-
-
-
-    // public GreenHouseModel create(GreenHouseModel data) {
-    //     data.setId(UUID.randomUUID().toString());
-    //     // data.setTimestamp(System.currentTimeMillis());
-    //     repository.save(data);
-    //     return data;
-    // }
+ 
 
     public GreenHouseModel getById(String id)
             throws ExecutionException, InterruptedException {
