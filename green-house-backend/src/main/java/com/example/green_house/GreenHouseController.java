@@ -18,10 +18,15 @@ public class GreenHouseController {
     }
 
     // CREATE
-    @PostMapping
-    public ResponseEntity<GreenHouseModel> create(
-            @RequestBody GreenHouseModel data) {
+    @PostMapping("/save-ui")
+    public ResponseEntity<GreenHouseModel> create(  
+
+            @RequestBody GreenHouseModel data) throws InterruptedException {
+
+                System.out.println(data);               
+                
         return ResponseEntity.ok(service.create(data));
+        
     }
 
     // READ ALL

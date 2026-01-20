@@ -131,6 +131,32 @@ public class GreenHouseRepo {
     return latest[0];
 }
 
+public boolean existsByTimestamp(String timestamp) throws InterruptedException {
+    final boolean[] exists = {false};
+    CountDownLatch latch = new CountDownLatch(1);
+
+    databaseReference
+        .orderByChild("timestamp")
+        .equalTo(timestamp)
+        .addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                exists[0] = snapshot.exists(); // true if there is any record with this timestamp
+                latch.countDown();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                latch.countDown();
+            }
+        });
+
+    latch.await();
+    return exists[0];
+}
+
+
 
     
 

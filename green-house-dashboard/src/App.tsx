@@ -1,11 +1,11 @@
 import "./App.css";
-import DashBoard from "./coponents/DashBoard";
+import AppRoutes from "./routes/AppRouts";
 
 function App() {
   return (
-    <>
-      <DashBoard />
-    </>
+    <div className="main-app-s">
+      <AppRoutes />
+    </div>
   );
 }
 

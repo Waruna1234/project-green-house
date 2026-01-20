@@ -2,18 +2,31 @@ package com.example.green_house;
 
 public class GreenHouseModel {
 
+    
     private String id;          
-    private Long timestamp;
+    private String timestamp;
     private double temperature;
     private double humidity;
     private double soilMoisture;
     private Double co2; 
+
+        @Override
+    public String toString() {
+        return "GreenHouseModel{" +
+                "temp=" + temperature +
+                ", rh=" + humidity +
+                ", soilMoisture=" + soilMoisture +
+                
+                ", co2=" + co2 +
+                ", timestamp='" + timestamp + '\'' +
+                '}';
+    }
     
     public GreenHouseModel() {
         
     }
 
-    public GreenHouseModel(String id, Long timestamp, double temperature,
+    public GreenHouseModel(String id, String timestamp, double temperature,
                        double humidity, double soilMoisture, Double co2) {
         this.id = id;
         this.timestamp = timestamp;
@@ -26,8 +39,8 @@ public class GreenHouseModel {
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 
-    public Long getTimestamp() { return timestamp; }
-    public void setTimestamp(Long timestamp) { this.timestamp = timestamp; }
+    public String getTimestamp() { return timestamp; }
+    public void setTimestamp(String timestamp) { this.timestamp = timestamp; }
 
     public double getTemperature() { return temperature; }
     public void setTemperature(double temperature) { this.temperature = temperature; }
@@ -40,5 +53,7 @@ public class GreenHouseModel {
 
     public Double getCo2() { return co2; }
     public void setCo2(Double co2) { this.co2 = co2; }
+
+
 
 }
