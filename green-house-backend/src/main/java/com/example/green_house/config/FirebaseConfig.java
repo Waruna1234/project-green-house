@@ -35,7 +35,7 @@ public class FirebaseConfig {
 
             FirebaseOptions options = FirebaseOptions.builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .setDatabaseUrl("https://green-house-fee5f-default-rtdb.firebaseio.com")
+                .setDatabaseUrl("https://smart-greenhouse-system-94981-default-rtdb.firebaseio.com")
                 .build();
 
             FirebaseApp.initializeApp(options);

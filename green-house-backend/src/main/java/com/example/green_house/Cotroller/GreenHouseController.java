@@ -1,10 +1,13 @@
-package com.example.green_house;
+package com.example.green_house.Cotroller;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.green_house.Model.GreenHouseModel;
+import com.example.green_house.Service.GreenHousService;
 
 @RestController
 @RequestMapping("/api")

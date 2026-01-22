@@ -1,4 +1,4 @@
-package com.example.green_house;
+package com.example.green_house.Model;
 
 public class GreenHouseModel {
 
@@ -53,7 +53,5 @@ public class GreenHouseModel {
 
     public Double getCo2() { return co2; }
     public void setCo2(Double co2) { this.co2 = co2; }
-
-
 
 }

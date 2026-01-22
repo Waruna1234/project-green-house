@@ -1,4 +1,4 @@
-package com.example.green_house;
+package com.example.green_house.Service;
 
 import java.util.List;
 import java.util.UUID;
@@ -6,6 +6,9 @@ import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 
 import org.springframework.stereotype.Service;
+
+import com.example.green_house.Model.GreenHouseModel;
+import com.example.green_house.Repository.GreenHouseRepo;
 
 
 
